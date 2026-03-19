@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  html,
+  body {
+    @apply m-0 min-h-screen overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply border border-white/20 bg-white/5 backdrop-blur-xl shadow-glass;
+  }
+
+  .section-title {
+    @apply mb-4 text-2xl font-semibold tracking-tight text-slate-100 md:text-3xl;
+  }
+
+  .muted {
+    @apply text-slate-300/80;
+  }
+
+  .grid-fade {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 36px 36px;
+    mask-image: radial-gradient(circle at center, black, transparent 72%);
+  }
+}
